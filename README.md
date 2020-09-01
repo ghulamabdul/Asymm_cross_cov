@@ -1,4 +1,7 @@
 # Flexible Modeling of Variable Asymmetries in Cross-covariance Functions for Multivariate Random Fields
+<img align="right" src="https://github.com/ghulamabdul/Asymm_cross_cov/blob/master/promoimage.asym.png" alt="drawing" width="400"/>
+
+
 This repository provides reproducible code for the manuscript titled *Flexible Modeling of Variable Asymmetries in Cross-covariance Functions for Multivariate Random Fields* by Ghulam A. Qadir, Carolina Éuan, and Ying Sun. The manuscript describes a new approach to introduce flexible asymmetries in the stationary cross-covariance functions through modification of phase spectrum.
 
 ## Abstract
