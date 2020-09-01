@@ -13,4 +13,3 @@ The marginal covariance functions are always symmetric; however, the cross-covar
 The codes are written in R, and reproducing would require installing and loading the following R-packages: `fields`,`sp`,`maps`,`maptools`,`geosphere`,`MASS`,`scoringRules`,`doParallel`,`rgdal`,`ggplot2`,`gridExtra`, `RColorBrewer`,`rgdal` and `viridis`. 
 
 ##
-<img src="https://github.com/ghulamabdul/Asymm_cross_cov/blob/master/promoimage.asym.png" width="250"> | <img src="https://github.com/ghulamabdul/Asymm_cross_cov/blob/master/promoimage.asym.png" width="250">
