@@ -55,13 +55,6 @@ for(i in 1:length(xylim$Var1))
 
 
 library(rgl)
-#plot3d(x=plotdata_full[,1],y=plotdata_full[,2],z=plotdata_full[,3],xlab="x",ylab="y",zlab="z",col = "green")
-#plot3d(x=plotdata_sub[,1],y=plotdata_sub[,2],z=plotdata_sub[,3],xlab="x",ylab="y",zlab="z",col = "red",add = T)
-#plot3d(x=plotdata_sub[,1],y=plotdata_sub[,2],z=plotdata_sub[,3],xlab="x",ylab="y",zlab="z",col = "red")
-#plot3d(x=plotdata_full[,1],y=plotdata_full[,2],z=plotdata_full[,3],xlab="x",ylab="y",zlab="z",col = "green",add = T)
-
-
-
 
 
 ##########################################################
@@ -150,67 +143,10 @@ for(i in 1:length(xylim$Var1))
   zlim_full[i,]<-z_full(xylim$Var1[i],xylim$Var2[i])
   zlim_sub[i,]<-z_sub(xylim$Var1[i],xylim$Var2[i])
 }
-#install.packages("tikzDevice")
-#library(tikzDevice)
-#td <- tempdir()
-#tf <- file.path(td,'example2.tex')
-#oldwd <- getwd()
-#setwd(td)
 
-#LaTeX math symbol names
-#syms <-c('alpha','theta','tau','beta','vartheta','pi','upsilon',
-#         'gamma','gamma','varpi','phi','delta','kappa','rho',
- #        'varphi','epsilon','lambda','varrho','chi','varepsilon',
-  #       'mu','sigma','psi','zeta','nu','varsigma','omega','eta',
-  #       'xi','Gamma','Lambda','Sigma','Psi','Delta','Xi','Upsilon',
-  #       'Omega','Theta','Pi','Phi')
-#x <- rnorm(length(syms))
-#y <- rnorm(length(syms))
-
-#tikz(tf,standAlone=TRUE)
-#plot(-2:2, -2:2, type = "n", axes=F,
- #    xlab='', ylab='', main='TikZ Device Math Example')
-#text(x,y,paste('\\\\Large$\\\\',syms,'$',sep=''))
-#dev.off()
-
-#View the output
-#tools::texi2dvi(tf,pdf=TRUE)
-#system(paste(getOption('pdfviewer'),file.path(td,'example2.pdf')))
-#setwd(oldwd)
-
-
-#options(tikzMetricPackages = c("\\usepackage[utf8]{inputenc}",
-#                               "\\usepackage[T1]{fontenc}", "\\usetikzlibrary{calc}",
-#                               "\\usepackage{amssymb}","\\usepackage{bm}"))
-
-#tikz("trial23.tex", width = 4.8, height = 3.8, standAlone = TRUE,
- #    packages = c("\\usepackage{tikz}",
-  #                
-   #               "\\usepackage{amssymb}","\\usepackage{bm}"))
-#par(mar = c(4, 4, 0.5, 0.5))
-#image.plot(x=x,y=y,z=matrix(zlim_full[,2],nrow=resxy,ncol=resxy),col=viridis(n=resxy^2),
- #          xlab="$|\\ddot{\\gamma}_{12}(\\bm{\\omega})|$",ylab="$|\\ddot{\\gamma}_{13}(\\bm{\\omega})|$")
-#hyp.angle<-45
-#lines(x[1:(resxy/2)],y[1:(resxy/2)])
-#text(x[(resxy/2)]+0.03,y[(resxy/2)]+0.03,bquote("1.0"),srt=hyp.angle)
-#lines(x[(resxy/2+6):resxy],y[(resxy/2+6):resxy])
-#contour(x=x,y=y,z=matrix(zlim_full[,2],nrow=resxy,ncol=resxy),add = T,
-#        levels = seq(0,0.9,0.1),labcex = 1,"flattest")
-#points(x=1,y=1,pch=19,col="red")
-
-#dev.off()
-#tools::texi2dvi("trial23.tex",pdf = T)
-#system(paste(getOption("pdfviewer"), "trial23.pdf"))
-#?contour
-#?tools
-#par(mfrow=c(2,3))
-#library(fields)
-#library(viridis)
-#par(mfrow=c(1,1))
-#demo("Hershey")
 library(fields)
 library(viridis)
-#pdf("fintry.pdf",width = 6.0,height = 5.5)
+
 par(mar=c(4,4.2,0.5,0.5))
 image.plot(x=x,y=y,z=matrix(zlim_full[,2],nrow=resxy,ncol=resxy),col=viridis(n=resxy^2),
            xlab=expression(paste("|",gamma[12],"(",omega,")|")),ylab=expression(paste("|",dot(gamma[13]),"(",omega,")|")))
