@@ -8,4 +8,4 @@ Please run the codes in the following order under their respective folders, i.e 
 5. Case5.R
 6. Case6.R
 
-After generating the output file (.RData) under their respective folders, run the code `compiling simulations.R`
+After generating the output file (.RData) under their respective folders, run the code `Compiling Simulations.R`
